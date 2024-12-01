@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "199a5ad0-60f3-4ac2-8d16-e2da253236e7",
+		"name": "gatewayserver",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3913811"
+	},
+	"item": [
+		{
+			"name": "actuator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8072/actuator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"actuator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "routes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8072/actuator/gateway/routes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"actuator",
+						"gateway",
+						"routes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactions-service-saveTransaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"creditCard\": \"5482605555430265\",\r\n    \"amount\": 100.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8072/creditCard/transactions-service/api/saveTransaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"creditCard",
+						"transactions-service",
+						"api",
+						"saveTransaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "black-list-service-create blacklist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"creditCard\": \"5482605555430265\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8072/creditCard/black-list-service/api/createBlacklist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"creditCard",
+						"black-list-service",
+						"api",
+						"createBlacklist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactions-service-getAllTransactions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"creditCard\": \"5482605555430265\",\r\n    \"amount\": 100.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8072/creditCard/transactions-service/api/getAllTransactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"creditCard",
+						"transactions-service",
+						"api",
+						"getAllTransactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactions-service-transactions-info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"creditCard\": \"5482605555430265\",\r\n    \"amount\": 100.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8072/creditCard/transactions-service/api/transactions-info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"creditCard",
+						"transactions-service",
+						"api",
+						"transactions-info"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
